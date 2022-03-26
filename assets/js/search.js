@@ -1,35 +1,39 @@
-/*
-    * LOVELY THINGS
-    */
+let searchable = [
+  'Audi',
+  'Maruthi',
+  'BMW',
+  'Bharath Benz',
+  'Engines',
+  'Transmissions',
+  'Honda',
+];
 
-var options = {
-    valueNames: [ 'name', 'description', 'category' ]
-  };
-  
-  var featureList = new List('lovely-things-list', options);
-  
-  $('#filter-games').click(function() {
-    featureList.filter(function(item) {
-      if (item.values().category == "Game") {
-        return true;
-      } else {
-        return false;
-      }
+const searchInput = document.getElementById('search');
+const searchWrapper = document.querySelector('.wrapper');
+const resultsWrapper = document.querySelector('.results');
+
+searchInput.addEventListener('keyup', () => {
+  let results = [];
+  let input = searchInput.value;
+  if (input.length) {
+    results = searchable.filter((item) => {
+      return item.toLowerCase().includes(input.toLowerCase());
     });
-    return false;
-  });
-  
-  $('#filter-beverages').click(function() {
-    featureList.filter(function(item) {
-      if (item.values().category == "Beverage") {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    return false;
-  });
-  $('#filter-none').click(function() {
-    featureList.filter();
-    return false;
-  });
+  }
+  renderResults(results);
+});
+
+function renderResults(results) {
+  if (!results.length) {
+    return searchWrapper.classList.remove('show');
+  }
+
+  const content = results
+    .map((item) => {
+      return `<li>${item}</li>`;
+    })
+    .join('');
+
+  searchWrapper.classList.add('show');
+  resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+}

@@ -23,6 +23,7 @@
     <link href="assets/css/plugins/animate.min.css" rel="stylesheet">
     <!-- Style CSS -->
     <link href="assets/css/style.css" rel="stylesheet" >
+    <link href="assets/css/search.css" rel="stylesheet" >
 
 </head>
 
@@ -49,13 +50,7 @@
                                     <a href="#services">Service</a>
                                    
                                 </li>
-                                <li class="has-dropdown">
-                                    <a href="portfolio-list.html">Project</a>
-                                    <ul class="submenu">
-                                        <li><a href="portfolio-list.html">Project</a></li>
-                                        <li><a href="portfolio-details.html">Project Details</a></li>
-                                    </ul>
-                                </li>
+                               
                                 <li class="has-dropdown">
                                     <a href="#Pages">Brands</a>
                                     <ul class="submenu">
@@ -68,13 +63,14 @@
                                     <a href="#Blogs">Blogs</a>
                                     
                                 </li>
-                                <li><a href="contact.html">Locations</a></li>
+                                <li><a href="#locate">Locations</a></li>
                             </ul>
                             <!-- End Header Menu -->
                         </div>
                         <div class="col-auto">
                             <div class="header-btn-link">
-                                <a href="contact.html" class="btn btn-default">Book Now<i class="icofont-double-right"></i></a>
+                                <button class="btn btn-none" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icofont-search-1 skyblue"></i></button>
+                               
                             </div>
                         </div>
                     </div>
@@ -82,7 +78,25 @@
             </div>
         </header>
         <!-- .....:::::: End Header Section :::::.... -->
-
+        <!---......::::: Modal ::::::::::......-->
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="wrapper">
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="search" id="search" placeholder="Type to search" autocomplete="chrome-off">
+            <button><i class="fa fa-search"></i></button>
+            <div class="results">
+              <ul>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
         <!-- .....:::::: Start Mobile Header Section :::::.... -->
         <div class="mobile-header sticky-header  d-block d-lg-none">
             <div class="container-fluid">
@@ -133,9 +147,7 @@
                                 
                                 </li>
                                 <div class="col-auto">
-                                    <div class="header-btn-link">
-                                        <a href="contact.html" class="btn btn-mob btn-default">Book Now<i class="icofont-double-right"></i></a>
-                                    </div>
+                                   
                                 </div>
                             </ul>
                         </div> <!-- End Mobile Menu Nav -->
@@ -153,11 +165,14 @@
         <!-- ...::: Start Hero Display Section :::... -->
         <div class="hero-display-section section-fluid-200">
             <div class="box-wrappr ">
+                
                 <div class="hero-wrapper">
                     <div class="hero-content">
                         <h1 class="title-tag"><span>Gem3</span> Auto Parts</h1>
                         <h4 class="title">Budget-friendly auto parts supplier dedicated to your satisfaction and the loyalty of our clients</p></h4>
-                        <div class="move"><a href="#gem3" class="text-black-50  icon-right">scroll down <i class="icofont-scroll-double-down"></i></a></div>
+                        <div class="header-btn-link">
+                            <a href="contact.html" class="btn btn-default">Book Now<i class="icofont-double-right"></i></a>
+                        </div>
                     </div>
                     <div class="hero-image">
                         <img class="img-fluid" src="assets/images/hero/hero-img.svg" alt="">
@@ -705,6 +720,7 @@
 
     <!--Main JS (Common Activation Codes)-->
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/search.js" defer></script>
 
 </body>
 
