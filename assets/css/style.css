@@ -63,7 +63,6 @@ body,
 html {
   height: 100%;
 }
-
 body {
   font-size: 16px;
   font-family: "Manrope", sans-serif;
@@ -1782,7 +1781,7 @@ input, textarea {
   text-transform: capitalize;
   padding: 8px 20px;
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .section-content .section-tag.tag-orange {
@@ -1843,12 +1842,12 @@ input, textarea {
 }
 
 .section-content .icon-seperator {
-  margin-top: 6px;
+  margin-top: 3px;
   display: inline-block;
 }
 
 .section-content .btn {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 @media (min-width: 992px) {
@@ -1859,7 +1858,7 @@ input, textarea {
 
 @media (min-width: 1400px) {
   .section-content .btn {
-    margin-top: 60px;
+    margin-top: 10px;
   }
 }
 
@@ -1872,7 +1871,7 @@ input, textarea {
 }
 
 .section-content-gap-80 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2285,12 +2284,36 @@ input, textarea {
             flex-direction: row;
   }
 }
+.move{
+  transform: translatey(0px);
+	animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
 
+.hero{
+  
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
 .hero-wrapper .hero-image {
   position: relative;
   padding: 0 20px;
   margin-bottom: 20px;
   margin-top: 140px;
+  
 }
 
 @media (min-width: 992px) {
@@ -2325,7 +2348,7 @@ input, textarea {
   .hero-wrapper .hero-content {
   
     margin-top: 100px;
-    padding: 25px 20px 0px 20px;
+    padding: 80px 20px 0px 20px;
   }
 }
 
@@ -2344,10 +2367,9 @@ input, textarea {
 }
 
 .hero-wrapper .hero-content .title-tag {
-  font-size: 22px;
+  font-size: 48px;
   font-weight: 700;
-  padding: 7.5px 20px;
-  border: 1px dashed #c3c4c7;
+  padding: 7.5px 10px;
   color: #f17e59;
   position: relative;
 }
@@ -2368,7 +2390,7 @@ input, textarea {
 .hero-wrapper .hero-content .title {
   font-weight: 800;
   line-height: 1;
-  font-size: 32px;
+  font-size: 28px;
   margin-top: 1px;
   margin-bottom: 10px;
 }
@@ -2395,7 +2417,8 @@ input, textarea {
 
 @media (min-width: 1200px) {
   .hero-wrapper .hero-content .title {
-    font-size: 48px;
+    font-size: 32px;
+    line-height: 2.5rem;
   }
 }
 
@@ -2989,7 +3012,9 @@ input, textarea {
 .promo-single-items:hover .title {
   color: #f17e59;
 }
-
+.service-wrapper{
+  margin-top: -0.5rem;
+}
 /*****************************
 * Components - Service Display
 *****************************/

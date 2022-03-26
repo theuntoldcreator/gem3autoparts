@@ -66,3 +66,12 @@
         return _;
     };
 })(jQuery);
+$("a[href^='#']").click(function(e) {
+    e.preventDefault();
+
+    var position = $($(this).attr("href")).offset().top - 170;
+
+    $("body, html").animate({
+        scrollTop: position
+    } /* speed */ );
+});
