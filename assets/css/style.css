@@ -725,7 +725,7 @@ input, textarea {
 
 @media (min-width: 1200px) {
   .default-text-content .title {
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 40px;
     margin-bottom: 35px;
   }
@@ -2381,19 +2381,6 @@ input, textarea {
   position: relative;
 }
 
-.hero-wrapper .hero-content .title-tag::after {
-  position: absolute;
-  content: "";
-  background-image: url("../images/particle/right-arrow.png");
-  width: 21px;
-  height: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: -40px;
-}
-
 .hero-wrapper .hero-content .title {
   font-weight: 800;
   line-height: 1;
@@ -2416,7 +2403,7 @@ input, textarea {
 
 @media (min-width: 768px) {
   .hero-wrapper .hero-content .title {
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -2425,19 +2412,19 @@ input, textarea {
 @media (min-width: 1200px) {
   .hero-wrapper .hero-content .title {
     font-size: 32px;
-    line-height: 2.5rem;
+    line-height: 2.4rem;
   }
 }
 
 @media (min-width: 1400px) {
   .hero-wrapper .hero-content .title {
-    font-size: 65px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 1800px) {
   .hero-wrapper .hero-content .title {
-    font-size: 75px;
+    font-size: 45px;
     margin-top: 43px;
     margin-bottom: 45px;
   }
