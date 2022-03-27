@@ -21,17 +21,7 @@
     outline: none;
   }
   
-  button {
-    position: absolute;
-    border: none;
-    background: none;
-    top: 0;
-    right: 0;
-    height: 50px;
-    line-height: 50px;
-    padding: 0;
-    width: 50px;
-  }
+ 
   
   button:focus {
     outline: none;
