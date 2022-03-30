@@ -1,0 +1,22 @@
+{
+  "name": "strane",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/its-me-satya/gem3autoparts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/its-me-satya/gem3autoparts/issues"
+  },
+  "homepage": "https://github.com/its-me-satya/gem3autoparts#readme",
+  "dependencies": {}
+}
