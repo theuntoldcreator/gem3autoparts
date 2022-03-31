@@ -367,5 +367,48 @@
      ***********************************************/
     $('body').materialScrollTop();
     
+    $(document).ready(function(){
 
+        load_json_data('vnames');
+        
+        function load_json_data(id, parent_id)
+        {
+         var html_code = '';
+         $.getJSON('parts.json', function(data){
+        
+          html_code += '<option value="">Select '+id+'</option>';
+          $.each(data, function(key, value){
+           if(id == 'vnames')
+           {
+            if(value.parent_id == '0')
+            {
+             html_code += '<option value="'+value.id+'" name="'+value.name+'">'+value.name+'</option>';
+            }
+           }
+           else
+           {
+            if(value.parent_id == parent_id)
+            {
+             html_code += '<option value="'+value.id+'" name="'+value.name+'">'+value.name+'</option>';
+            }
+           }
+          });
+          $('#'+id).html(html_code);
+         });
+        
+        }
+        
+        $(document).on('change', '#vnames', function(){
+         var vnames_id = $(this).val();
+         if(vnames_id != '')
+         {
+          load_json_data('vmodals', vnames_id);
+         }
+         else
+         {
+          $('#vmodals').html('<option value="">Select Modal</option>');
+         }
+        });
+        
+        });
 })(jQuery);
