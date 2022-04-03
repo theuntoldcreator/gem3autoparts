@@ -1,39 +1,57 @@
-let searchable = [
-  'Audi',
-  'Maruthi',
-  'BMW',
-  'Bharath Benz',
-  'Engines',
-  'Transmissions',
-  'Honda',
-];
+// getting all required elements
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+const icon = searchWrapper.querySelector(".icon");
+let linkTag = searchWrapper.querySelector("a");
+let webLink;
 
-const searchInput = document.getElementById('search');
-const searchWrapper = document.querySelector('.wrapper');
-const resultsWrapper = document.querySelector('.results');
+// if user press any key and release
+inputBox.onkeyup = (e)=>{
+    let userData = e.target.value; //user enetered data
+    let emptyArray = [];
+    if(userData){
+        icon.onclick = ()=>{
+            webLink = `https://www.google.com/search?q=${userData}`;
+            linkTag.setAttribute("href", webLink);
+            linkTag.click();
+        }
+        emptyArray = suggestions.filter((data)=>{
+            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+        });
+        emptyArray = emptyArray.map((data)=>{
+            // passing return data inside li tag
+            return data = `<li class="mx-2">${data} : <i class="green">Parts Available <i class="icofont-verification-check"></i></i></li>`;
+        });
+        searchWrapper.classList.add("active"); //show autocomplete box
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++) {
+        }
+    }else{
+        searchWrapper.classList.remove("active"); //hide autocomplete box
+    }
+}
 
-searchInput.addEventListener('keyup', () => {
-  let results = [];
-  let input = searchInput.value;
-  if (input.length) {
-    results = searchable.filter((item) => {
-      return item.toLowerCase().includes(input.toLowerCase());
-    });
-  }
-  renderResults(results);
-});
+function select(element){
+    let selectData = element.textContent;
+    inputBox.value = selectData;
+    icon.onclick = ()=>{
+        webLink = `https://www.google.com/search?q=${selectData}`;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+    }
+    searchWrapper.classList.remove("active");
+}
 
-function renderResults(results) {
-  if (!results.length) {
-    return searchWrapper.classList.remove('show');
-  }
-
-  const content = results
-    .map((item) => {
-      return `<li>${item}</li>`;
-    })
-    .join('');
-
-  searchWrapper.classList.add('show');
-  resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+function showSuggestions(list){
+    let listData;
+    if(!list.length){
+        userValue = inputBox.value;
+        listData = `<li class="mx-2">${userValue} <i class="red"> : Parts Not Available <i class="icofont-error"></i></i></li>`;
+    }else{
+      listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
 }

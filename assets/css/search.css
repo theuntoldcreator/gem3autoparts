@@ -6,7 +6,16 @@
     position: relative;
     width: 450px;
   }
-  
+  li{
+    list-style-type:none;
+    padding: 2px;
+  }
+  .green{
+    color: #1bdb5b;
+  }
+  .red{
+    color: #db1b1b;
+  }
   input {
     width:100%;
     border: none;
