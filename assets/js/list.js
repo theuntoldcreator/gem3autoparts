@@ -47,4 +47,6 @@ let suggestions = [
     "Suzuki",
     "Tesla",
     "Toyota",
+    
 ];
+
