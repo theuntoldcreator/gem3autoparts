@@ -364,34 +364,48 @@
 
     
     $('body').materialScrollTop();
+<<<<<<< HEAD
     
     /************************************************$(document).ready(function(){
+=======
+    $(document).ready(function(){
+        $('#vparts').muliselect({
+            column:1,
+            placeholder: 'Search Parts',
+            search: true
+        })
+        $('select[multiple]').multiselect();
+    }
+   
+    /************************************************
+   $(document).ready(function(){
+>>>>>>> 42185b132815dacc09f490e2db7c67c3e722b4b9
 
         load_json_data('vnames');
         
-        function load_json_data(id, parent_id)
+        function load_json_data(num, parent_id)
         {
          var html_code = '';
          $.getJSON('parts.json', function(data){
         
-          html_code += '<option value="">Select '+id+'</option>';
+          html_code += '<option value="">Select '+num+'</option>';
           $.each(data, function(key, value){
-           if(id == 'vnames')
+           if(num == 'vnames')
            {
             if(value.parent_id == '0')
             {
-             html_code += '<option value="'+value.id+'" name="'+value.name+'">'+value.name+'</option>';
+             html_code += '<option value="'+value.num+'" name="'+value.brandname+'">'+value.brandname+'</option>';
             }
            }
            else
            {
             if(value.parent_id == parent_id)
             {
-             html_code += '<option value="'+value.id+'" name="'+value.name+'">'+value.name+'</option>';
+             html_code += '<option value="'+value.num+'" name="'+value.brandname+'">'+value.brandname+'</option>';
             }
            }
           });
-          $('#'+id).html(html_code);
+          $('#'+num).html(html_code);
          });
         
         }
@@ -406,7 +420,8 @@
          {
           $('#vmodals').html('<option value="">Select Modal</option>');
          }
-        });
+        });  * Scroll Top
+     ***********************************************/ 
         
         });
      * Scroll Top
