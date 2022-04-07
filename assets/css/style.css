@@ -1205,11 +1205,11 @@ input, textarea {
   color: #03A9F4;
 }
 .btn-default {
-  border-radius: 16px !important;
+  border-radius: 8px !important;
   z-index: 1;
 }
 .btn-close:hover{
-  border-color: #033246;
+  border-color: #e5e5e5;
   color: #ffffff;
 }
 .btn-mob{
@@ -1223,10 +1223,10 @@ input, textarea {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   border :#ffffff 2px solid;
   opacity: .2;
-  border-radius: 16px;
+  border-radius: 8px;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
@@ -1255,7 +1255,7 @@ input, textarea {
 .btn-default-outline {
   border: 1px solid #e0e3e7;
   border-radius: 32.5px;
-  color: #000c3a;
+  color: #e5e5e5;
   z-index: 1;
   background-size: 101%;
   background: transparent;
@@ -2383,7 +2383,7 @@ input, textarea {
   position: relative;
 }
 
-.hero-wrapper .hero-content .title {
+.hero-wrapper .hero-content .title  .title-tag{
   font-weight: 800;
   line-height: 1;
   font-size: 28px;
@@ -2394,24 +2394,26 @@ input, textarea {
 .hero-wrapper .hero-content .title span {
   color: #03A9F4;
 }
-
+@media (min-width: 425px) {
+  .hero-wrapper .hero-content .title-tag .title {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 @media (min-width: 576px) {
-  .hero-wrapper .hero-content .title {
-    font-size: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  .hero-wrapper .hero-content .title .title-tag {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: 768px) {
-  .hero-wrapper .hero-content .title {
+  .hero-wrapper .hero-content .title .title-tag {
     font-size: 35px;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  .title-tag {
-    font-size: 20px;
-    
   }
 }
 
@@ -5303,13 +5305,14 @@ input, textarea {
 .header-btn-link .btn {
   font-size: 14px;
   padding: 8px 16px;
-  border-radius: 32.5px;
+  border-radius: 2px;
   background:#033246;
+  color: #fff;
 }
 .header-btn-link .btn :hover {
   font-size: 14px;
   padding: 8px 16px;
-  border-radius: 32.5px;
+  border-radius: 2px;
   background:#033246 !important;
 }
 @media (min-width: 768px) {
