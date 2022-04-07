@@ -366,6 +366,8 @@
      * Scroll Top
      ***********************************************/
     $('body').materialScrollTop();
-    
+    $( "#locate" ).click(function() {
+        $( "#location" ).click();
+      });
 
 })(jQuery);
