@@ -362,68 +362,10 @@
     });
 
 
-    
-    $('body').materialScrollTop();
-<<<<<<< HEAD
-    
-    /************************************************$(document).ready(function(){
-=======
-    $(document).ready(function(){
-        $('#vparts').muliselect({
-            column:1,
-            placeholder: 'Search Parts',
-            search: true
-        })
-        $('select[multiple]').multiselect();
-    }
-   
     /************************************************
-   $(document).ready(function(){
->>>>>>> 42185b132815dacc09f490e2db7c67c3e722b4b9
-
-        load_json_data('vnames');
-        
-        function load_json_data(num, parent_id)
-        {
-         var html_code = '';
-         $.getJSON('parts.json', function(data){
-        
-          html_code += '<option value="">Select '+num+'</option>';
-          $.each(data, function(key, value){
-           if(num == 'vnames')
-           {
-            if(value.parent_id == '0')
-            {
-             html_code += '<option value="'+value.num+'" name="'+value.brandname+'">'+value.brandname+'</option>';
-            }
-           }
-           else
-           {
-            if(value.parent_id == parent_id)
-            {
-             html_code += '<option value="'+value.num+'" name="'+value.brandname+'">'+value.brandname+'</option>';
-            }
-           }
-          });
-          $('#'+num).html(html_code);
-         });
-        
-        }
-        
-        $(document).on('change', '#vnames', function(){
-         var vnames_id = $(this).val();
-         if(vnames_id != '')
-         {
-          load_json_data('vmodals', vnames_id);
-         }
-         else
-         {
-          $('#vmodals').html('<option value="">Select Modal</option>');
-         }
-        });  * Scroll Top
-     ***********************************************/ 
-        
-        });
      * Scroll Top
      ***********************************************/
+    $('body').materialScrollTop();
+    
+
 })(jQuery);
