@@ -10,7 +10,7 @@
    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
   <meta name="author" content="contain by gem3autoparts team">
   <meta name="copyright" content="Copyright © 2022 gem3autoparts">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <!-- ::::::::::::::Favicon icon::::::::::::::-->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
 
@@ -53,10 +53,7 @@
                                     <a href="service-list.html">Service</a>
                                    
                                 </li>
-                                <li class="has-dropdown">
-                                    <a href="#Pages">Brands</a>
-                                   
-                                </li>
+                                
                                 <li><a href="faq.html">FAQ's</a></li>
                                 <li><a href="location.html">Locations</a></li>
                             </ul>
@@ -64,7 +61,9 @@
                         </div>
                         <div class="col-auto">
                             <div class="header-btn-link">
+                               
                                 <a href="booking.html" class="btn btn-default">Book Now</a>
+                                <a href="" class="btn btn-default"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i  class="fa-solid fa-magnifying-glass"></i></a>
                             </div>
                         </div>
                     </div>
@@ -129,6 +128,7 @@
                                 <div class="col-auto">
                                     <div class="header-btn-link">
                                         <a href="booking.html" class="btn btn-default">Book Now</i></a>
+                                        <a href="" class="btn btn-default"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i  class="fa-solid fa-magnifying-glass"></i></a>
                                     </div>
                                 </div>
                             </ul>
@@ -404,7 +404,44 @@
             </div>
         </footer>
         <!-- ...::: End Footer Section :::... -->
-
+ <!---------------Start of the Brand Availability-->
+ <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+            <div class="col-xl-6 offset-xl-3">
+                <div class="section-content section-content-gap-80 text-center">
+                    <h6 class="section-tag tag-orange">Brand Availability</h6>
+                    <h3 class="section-title">Get to know more about the brand which we connected</h3>
+                    
+                    <span class="icon-seperator"><img
+                            src="assets/images/icons/section-seperator-shape.png" alt=""></span>
+                            
+                </div>
+                <div class="project-wrapper text-center">
+                    <div >
+                        <div class="wrapper">
+                            <div class="search-input">
+                              <a href="" target="_blank" hidden></a>
+                              <input type="text" placeholder="Type Your Vehical Brand....">
+                              <div class="autocom-box">
+                                <!-- here list are inserted from javascript -->
+                              </div>
+                              <div class="icon"></div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------End of the Brand Availability-->
             <!-- material-scrolltop button -->
             <button class="material-scrolltop" type="button"></button>
         </main>
@@ -428,6 +465,9 @@
 
         <!--Main JS (Common Activation Codes)-->
         <script src="assets/js/main.js"></script>
+        
+    <script src="assets/js/search.js" defer></script>
+    <script src="assets/js/list.js" defer></script>
 
     </body>
 
