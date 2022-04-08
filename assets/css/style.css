@@ -1238,7 +1238,9 @@ input, textarea {
   opacity: .8;
   animation: btnGradedientAnimate 8s linear infinite reverse;
 }
-
+.modal-open .container-fluid, .modal-open  .container {
+  -webkit-filter: blur(5px) grayscale(90%);
+}
 .btn-default-alt {
   border-radius: 16px;
   color: #033246;
