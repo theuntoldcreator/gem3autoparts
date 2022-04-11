@@ -58,7 +58,26 @@ Fonts Family:
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.hero-wrapper .hero-content .title-tag {
+  font-size: 22px;
+  font-weight: 400;
+  padding: 7.5px 20px;
+  border: 1px dashed #c3c4c7;
+  color: #f17e59;
+  position: relative;
+}
 
+.hero-wrapper .hero-content .title-tag::after {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -40px;
+}
 body,
 html {
   height: 100%;
@@ -69,6 +88,149 @@ i{pointer-events: none;
 .orange{
   color:#f17e59;
   opacity: .8;
+}
+/*------------- Form ---------------*/
+
+.nb-form {
+  position: fixed;
+  z-index: 9999;
+  width: 300px;
+  background: #FFF;
+  right: 20px;
+  bottom: -367px;
+  transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.nb-form:hover {
+  bottom: 0px;
+}
+
+/*-- User Icon --*/
+
+.nb-form .user-icon {
+  position: absolute;
+  top: -49px;
+  right: 12px;
+  display: block;
+  width: 100px;
+  margin: 10px auto 35px;
+  border-radius: 100%;
+}
+
+/*-- Title --*/
+
+.nb-form .title {
+  background: #03a9f4;
+  font-size: 16px !important;
+  padding: 20px 0px 20px 20px!important;
+  color: #fff !important;
+  width: 100%;
+  bottom: 0%;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*-- Text --*/
+
+.nb-form p {
+  font-size: 13px;
+  margin: 0;
+  padding: 10px;
+  color: #666;
+}
+
+.nb-form p.message {
+  margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+
+.nb-form form {
+  padding: 0px 0px 0px 0px;
+}
+
+.nb-form input,
+.nb-form textarea {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  width: 254px;
+  max-width: 254px;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  color: #999;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nb-form input:focus,
+.nb-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nb-form input[type='submit'] {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .4s ease;
+  color: #fff !important;
+  border: none;
+}
+
+.nb-form input[type='submit']:hover {
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.07),0 1px 7px 0 rgba(0,0,0,0.02),0 3px 1px -1px rgba(0,0,0,0.1);
+}
+
+.nb-form textarea {
+  min-height: 110px;
+}
+
+
+.nb-form ::-webkit-input-placeholder {
+  color: #ccb0b0;
+}
+
+.nb-form ::-moz-placeholder{
+  color: #ccb0b0;
+}
+
+.nb-form :-ms-input-placeholder {
+  color: #ccb0b0;
+}
+
+.nb-form :-moz-placeholder {
+  color: #ccb0b0;
+}
+
+.nb-form input[type='submit'] {
+  background: #03a9f4;
+}
+
+@media screen and (max-width: 676px) {
+  .nb-form:hover .user-icon {
+      display: none;
+  }
+
+  .nb-form .message {
+      display: none;
+  }
+
+  .nb-form form {
+      padding-top: 15px;
+  }
+  .nb-form{
+      right: 50%;
+      bottom: -320px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
 }
 body {
   font-size: 16px;
@@ -1240,9 +1402,8 @@ input, textarea {
   opacity: .8;
   animation: btnGradedientAnimate 8s linear infinite reverse;
 }
-.modal-open .container-fluid, .modal-open  .container {
-  filter: blur(4px) grayscale(90%);
-  -webkit-filter: blur(4px) grayscale(90%);
+.modal-dialog{
+  align-self: center !important;
 }
 .btn-default-alt {
   border-radius: 16px;
@@ -2266,6 +2427,7 @@ input, textarea {
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+          margin-top: 2rem;
 }
 
 @media (min-width: 992px) {
@@ -2379,9 +2541,11 @@ input, textarea {
     padding: 100px 0;
   }
 }
-
+.search-bold{
+  font-weight: 800;
+}
 .hero-wrapper .hero-content .title-tag {
-  font-size: 48px;
+  font-size: 1z8px;
   font-weight: 700;
   padding: 7.5px 10px;
   color: #f17e59;
@@ -2416,7 +2580,7 @@ input, textarea {
 
 @media (min-width: 768px) {
   .hero-wrapper .hero-content .title .title-tag {
-    font-size: 35px;
+    font-size: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -5323,9 +5487,10 @@ input, textarea {
 @media (min-width: 768px) {
   .header-btn-link .btn {
     font-size: 18px;
-    padding: 18px 40px;
+    padding: 8px 16px;
     background:#033246;
   }
+  
 }
 
 @media (min-width: 1200px) {
