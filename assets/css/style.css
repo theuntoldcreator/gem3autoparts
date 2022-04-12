@@ -1407,6 +1407,16 @@ input, textarea {
 }
 .modal-dialog{
   align-self: center !important;
+  
+}
+.center {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+#staticBackdrop{
+  padding: none !important;
 }
 .btn-default-alt {
   border-radius: 16px;
@@ -1485,7 +1495,10 @@ input, textarea {
     margin-top: 80px;
   }
 }
-
+.show{
+  padding-right: 40px !important;
+  align-items: center !important;
+}
 /*Form CSS*/
 .default-form-group .submit-btn,
 .comment-form .submit-btn {
