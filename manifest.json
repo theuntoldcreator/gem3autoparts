@@ -1,0 +1,31 @@
+{
+    "short_name": "GEM3",
+    "name": "Gem3 Auto Parts",
+    "description": "On our auto salvage network, you can find and start buying used auto parts, used car parts, and more. Our car part marketplace has a large selection of used auto parts.",
+    "scope": ".",
+   
+    "icons": [{
+            "src": "assets/images/logo/gem3-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/images/logo/gem3-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+              {
+    "src": "assets/images/logo/gem3-144.png",
+    "sizes": "144x144",
+    "type": "image/png",
+    "purpose": "any"
+}
+    ],
+    "start_url": "/index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "theme_color": "#fcfcfc"
+ 
+}
