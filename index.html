@@ -19,6 +19,7 @@
   />
     <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
     <!-- Vendor CSS -->
+    
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/icofont.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
@@ -82,14 +83,13 @@
                 <div class="col-auto">
                     <div class="header-btn-link">
                            
-                        <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-default">Book Now</a>
+                        <button href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-default">Book Now</button>
                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- .....:::::: Start MobileHeader Section :::::.... -->
 
     <!--  .....::::: Start Offcanvas Mobile Menu Section :::::.... -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="toggleMenu">
@@ -97,7 +97,11 @@
             <!-- Start Header Logo -->
             <a href="index.html" class="header-logo"><img src="assets/images/logo/logo1.svg" alt=""></a>
             <!-- End Header Logo -->
-           
+            <div class="header-btn-link">
+                           
+                <button href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-default">Book Now</button>
+               
+            </div>
         </div>
         <div class="offcanvas-body">
             <!-- Start Offcanvas Mobile Menu Wrapper -->
@@ -110,21 +114,24 @@
         <!-- Offcanvas Overlay -->
         <div class="offcanvas-overlay"></div>
         <!-- ...::: Start Hero Display Section :::... -->
-        <div class="hero-display-section section-fluid-200">
+        <div class="hero-display-section section-fluid-250">
             <div class="box-wrapper ">
                 <div class="hero-wrapper">
                     <div class="hero-content">
                         <span class="title-tag fs-3">Gem3 Auto Parts</span>
                         <h4 class="fs-3 my-2">Budget-friendly auto parts supplier dedicated to your satisfaction and the loyalty of our clients</p></h4>
                         
-                        <div class="move d-none d-lg-block"><a href="#gem3" class="orange  icon-right">scroll down <i class="icofont-scroll-double-down"></i></a></div>
+                        
                         
                     </div>
                     <div class="hero-image">
                         <img class="img-fluid" src="assets/images/hero/hero-img.svg" alt="">
                     </div>
                 </div>
+              
             </div>
+            <div class=" move text-center d-none d-lg-block"><a href="#gem3" class="skyblue fs-5  icon-right">scroll down <i class="icofont-scroll-double-down"></i></a></div>
+        
         </div>
         <!-- ...::: End Hero Display Section :::... -->
                 <!-- ...::: Start Content Display Section :::... -->
@@ -159,32 +166,7 @@
                         </div>
                     </div>
                 </div>
-                    <!-- ...::: Start Hero Display Section :::... -->
-        <div class="hero-display-section section-fluid-200">
-            <div class="box-wrappr">
-                <div class="hero-wrapper">
-                    <div class="hero-content">
-                        <span class="title-tag">Brand Availability</span>
-                        <h3 class="title search-bold">Search any used auto part by <span>brand</span></h3>
-                        <div class="search-input">
-                            <a href="" target="_blank" hidden></a>
-                            <input type="text" placeholder="Search Your Vehical Brand....">
-                            <div class="autocom-box">
-                              <!-- here list are inserted from javascript -->
-                            </div>
-                            <div class="icon"></div>
-                          </div>
-                    </div>
-                    <div class="hero-image">
-                        <img class="img-fluid" src="assets/images/hero/search.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ...::: End Hero Display Section :::... -->
-                <!-- ...::: End Content Display Section :::... -->
-               
-        <!-- ...::: Start Service Display Section :::... -->
+                 <!-- ...::: Start Service Display Section :::... -->
         <div  class="service-dispaly-section section-inner-padding-150 service-dispaly-bg">
             <div class="box-wrapper">
                 <div class="section-wrapper">
@@ -343,11 +325,45 @@
             </div>
         </div>
         <!-- ...::: End Service Display Section :::... -->
+                    
+                     <!-- ...::: Start Content Display Section :::... -->
+        <div class="content-display-section  section-top-gap-150 section-fluid-200">
+            <div class="box-wrapper custom-box-wrapper pos-relative">
+                <div class="content-inner-img content-inner-img-right">
+                    <img class="img-fluid" src="assets/images/hero/gem3.svg" alt="">
+                </div>
+                <div class="section-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 pos-relative">
+                                <div class="custom-section-content custom-section-content-left">
+                                    <div class="section-content section-content-gap-50 ">
+                                        <h6 class="section-tag tag-orange">Brand Availability</h6>
+                                        <h3 class="title search-bold py-2">Search any used auto part by <span>brand</span></h3>
+                                   
+                                    </div>
+                                    <div class="search-input">
+                                        <a href="" target="_blank" hidden></a>
+                                        <input type="text" placeholder="Search Your Vehical Brand....">
+                                        <div class="autocom-box">
+                                          <!-- here list are inserted from javascript -->
+                                        </div>
+                                        <div class="icon"></div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- ...::: End Content Display Section :::... -->
        
        
-      
+       
         <!-- ...::: Start Project Display Section :::... -->
-        <div id="Pages" class="project-display-section section-inner-padding-150 section-top-gap-150 project-dispaly-bg">
+        <div id="Pages" class="project-display-section section-inner-padding-50 section-top-gap-150 project-dispaly-bg">
             <div class="box-wrapper">
                 <div class="section-wrapper">
                     <div class="container">
@@ -362,6 +378,8 @@
             </div>
         </div>
         <!-- ...::: End Project Display Section :::... -->
+       
+      
         
    <!-- ...::: Start FAQ Section :::... -->
         
@@ -2383,9 +2401,7 @@
         </div>
         <!-- ...::: End Form Section :::... -->
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -2440,7 +2456,6 @@
                                                 <li><a href="">Discussion</a></li>
                                                 <li><a href="">Terms & Conditions</a></li>
                                                 <li><a href=""> Customer Support</a></li>
-                                                <li><a href="">Course FAQ’s</a></li>
                                             </ul>
                                         </div>
                                         <!-- End Footer Single Widget - Footer Menu-->
